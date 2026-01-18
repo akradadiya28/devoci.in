@@ -94,7 +94,7 @@ devoci/
 
 ```bash
 # Clone
-git clone https://github.com/yourusername/devoci.git
+git clone https://github.com/akradadiya28/devoci.in.git
 cd devoci
 
 # Install

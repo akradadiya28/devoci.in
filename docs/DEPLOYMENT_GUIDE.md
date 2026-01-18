@@ -47,7 +47,7 @@ This guide helps developers and early adopters run their own instance of the Dev
 2. **Clone repo & Install**:
 
    ```bash
-   git clone https://github.com/yourusername/devoci.git
+   git clone https://github.com/akradadiya28/devoci.in.git
    cd devoci
    pnpm install
    ```
