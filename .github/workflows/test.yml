@@ -1,49 +1,35 @@
-name: Backend CI
+name: API CI
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    
+
     strategy:
       matrix:
         node-version: [18.x, 20.x]
-        mongodb-version: ['6.0']
 
     steps:
-    - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'pnpm'
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
 
-    - uses: pnpm/action-setup@v2
-      with:
-        version: 8
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'pnpm'
 
-    - name: Start MongoDB
-      uses: supercharge/mongodb-github-action@1.10.0
-      with:
-        mongodb-version: ${{ matrix.mongodb-version }}
+      - name: Install dependencies
+        run: pnpm install
 
-    - name: Start Redis
-      uses: supercharge/redis-github-action@1.7.0
-
-    - name: Install dependencies
-      run: pnpm install --frozen-lockfile
-
-    - name: Build Backend
-      run: pnpm build:backend
-
-    # - name: Run Tests
-    #   run: pnpm test
-    #   env:
-    #     MONGODB_URI:mongodb://localhost:27017/test
-    #     REDIS_URL:redis://localhost:6379
+      - name: Build API
+        run: cd apps/api && pnpm build
