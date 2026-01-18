@@ -34,7 +34,7 @@ If your PR changes Core logic that might break Enterprise extensions, please dis
 1. **Fork & Clone**:
 
     ```bash
-    git clone https://github.com/your-username/devoci.git
+    git clone https://github.com/akradadiya28/devoci.in.git
     cd devoci
     ```
 
