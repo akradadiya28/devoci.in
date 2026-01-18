@@ -1,4 +1,4 @@
-<!-- markdownlint-disable MD033 MD041 -->
+<!-- markdownlint-disable MD033 MD041 MD036 MD060 -->
 <div align="center">
 
 # DevOci 🚀
@@ -31,7 +31,7 @@ DevOci is a **content aggregation and personalization platform** designed for de
 ## Features
 
 | Category | Features |
-|----------|----------|
+| -------- | -------- |
 | **API** | GraphQL with 60+ endpoints, REST webhooks |
 | **Auth** | JWT + OAuth (Google, GitHub) |
 | **Database** | MongoDB with Redis caching |
@@ -47,7 +47,7 @@ DevOci is a **content aggregation and personalization platform** designed for de
 ## Tech Stack
 
 | Layer | Technology |
-|-------|------------|
+| ----- | ---------- |
 | **Runtime** | Node.js 18+ |
 | **Language** | TypeScript |
 | **API** | Apollo GraphQL + Express |
@@ -64,7 +64,7 @@ DevOci is a **content aggregation and personalization platform** designed for de
 
 ## Folder Structure
 
-```
+```text
 devoci/
 ├── apps/
 │   ├── api/           # GraphQL API Server (@devoci/api)
@@ -117,7 +117,7 @@ pnpm dev
 Copy `.env.example` to `.env` and configure:
 
 | Variable | Description | Required |
-|----------|-------------|----------|
+| -------- | ----------- | -------- |
 | `MONGODB_URI` | MongoDB connection string | ✅ |
 | `REDIS_URL` | Redis connection string | ✅ |
 | `JWT_SECRET` | Secret for JWT signing | ✅ |
@@ -161,7 +161,7 @@ See [LICENSE](./LICENSE) for full terms.
 
 <div align="center">
 
-**Built with ❤️ for developers**
+### Made with ❤️ for developers
 
 [Documentation](./docs/) · [Report Bug](./.github/ISSUE_TEMPLATE/bug_report.md) · [Request Feature](./.github/ISSUE_TEMPLATE/feature_request.md)
 
