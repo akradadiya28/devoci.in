@@ -9,12 +9,7 @@ build/
 out/
 
 # Environment files (KEEP SECRETS PRIVATE)
-.env
-.env.local
 .env.*.local
-.env.development
-.env.production
-.env.staging
 !.env.example
 
 # Private/Proprietary Code (NOT PUSHED TO GITHUB)
@@ -49,3 +44,4 @@ coverage/
 # Documentation Notes
 mdfiles/
 
+config.bat
